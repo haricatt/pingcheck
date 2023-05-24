@@ -39,9 +39,9 @@ while true; do
   # Read the IP addresses and names from the file and ping each one
     while read -r ip_address name; do
         if ping -c 1 "$ip_address" &> /dev/null; then
-            echo "Ping to $name ($ip_address)${green}SUCCESS${reset}"
+            echo -e "Ping to $name ($ip_address)${green}SUCCESS${reset}"
         else
-            echo "Ping to $name ($ip_address) ${red}FAIL${reset}"
+            echo -e "Ping to $name ($ip_address) ${red}FAIL${reset}"
         fi
     done < "$ip_file"
   
