@@ -30,8 +30,8 @@ while true; do
   # Print the current and next run time
   echo "Current time: $current_time"
   echo "Next run time: $target_time"
-  echo ""
-  echo ""
+  echo 
+  echo 
   
   # Wait until the next run time
   sleep $(($(date -d "$target_time" +%s) - $(date -d "$current_time" +%s)))
