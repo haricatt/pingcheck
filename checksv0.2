@@ -18,7 +18,7 @@ while true; do
 
   # Find the next target hour
   for hour in "${target_hours[@]}"; do
-    if [[ "$current_hour" -lt "$hour" ]]; then
+    if [ "$current_hour" -lt "$hour" ]; then
       target_hour=$hour
       break
     fi
